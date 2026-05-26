@@ -12,6 +12,7 @@ export const curriculum = [
       '2d-matrices',
       'sorting',
       'hashing',
+      'strings',
     ],
   },
 ];

@@ -7,6 +7,7 @@ import { subarrays } from './subarrays.js';
 import { twoDMatrices } from './2d-matrices.js';
 import { sorting } from './sorting.js';
 import { hashing } from './hashing.js';
+import { strings } from './strings.js';
 
 export const topicList = [
   problemSolvingBasics,
@@ -18,6 +19,7 @@ export const topicList = [
   twoDMatrices,
   sorting,
   hashing,
+  strings,
 ];
 
 export const topics = Object.fromEntries(topicList.map((topic) => [topic.slug, topic]));
