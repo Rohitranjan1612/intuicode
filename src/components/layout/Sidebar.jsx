@@ -37,7 +37,7 @@ export function Sidebar({ activeTopicSlug, onTopicChange }) {
           </div>
         ))}
       </nav>
-      <div className="progress">
+      {/* <div className="progress">
         <div className="progress-copy">
           <span>Your progress</span>
           <span>3 / 13</span>
@@ -45,7 +45,7 @@ export function Sidebar({ activeTopicSlug, onTopicChange }) {
         <div className="progress-track">
           <span style={{ width: '23%' }} />
         </div>
-      </div>
+      </div> */}
     </aside>
   );
 }
