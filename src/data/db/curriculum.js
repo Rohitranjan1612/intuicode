@@ -13,6 +13,7 @@ export const curriculum = [
       'sorting',
       'hashing',
       'strings',
+      'bit-manipulation',
     ],
   },
 ];

@@ -8,6 +8,7 @@ import { twoDMatrices } from './2d-matrices.js';
 import { sorting } from './sorting.js';
 import { hashing } from './hashing.js';
 import { strings } from './strings.js';
+import { bitManipulation } from './bit-manipulation.js';
 
 export const topicList = [
   problemSolvingBasics,
@@ -20,6 +21,7 @@ export const topicList = [
   sorting,
   hashing,
   strings,
+  bitManipulation,
 ];
 
 export const topics = Object.fromEntries(topicList.map((topic) => [topic.slug, topic]));
