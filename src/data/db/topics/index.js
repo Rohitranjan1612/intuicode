@@ -6,6 +6,7 @@ import { carryForward } from './carry-forward.js';
 import { subarrays } from './subarrays.js';
 import { twoDMatrices } from './2d-matrices.js';
 import { sorting } from './sorting.js';
+import { hashing } from './hashing.js';
 
 export const topicList = [
   problemSolvingBasics,
@@ -16,6 +17,7 @@ export const topicList = [
   subarrays,
   twoDMatrices,
   sorting,
+  hashing,
 ];
 
 export const topics = Object.fromEntries(topicList.map((topic) => [topic.slug, topic]));

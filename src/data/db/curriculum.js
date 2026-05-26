@@ -11,6 +11,7 @@ export const curriculum = [
       'subarrays',
       '2d-matrices',
       'sorting',
+      'hashing',
     ],
   },
 ];
