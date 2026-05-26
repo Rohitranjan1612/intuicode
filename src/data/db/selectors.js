@@ -1,9 +1,9 @@
-import { topics } from './topics.js';
+import { topics, topicList } from './topics/index.js';
 
 export function getTopicBySlug(slug) {
-  return topics[slug] ?? topics.arrays;
+  return topics[slug] ?? topics['problem-solving-basics'];
 }
 
 export function getAllTopics() {
-  return Object.values(topics);
+  return topicList;
 }

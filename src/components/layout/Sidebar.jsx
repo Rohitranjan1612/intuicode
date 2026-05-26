@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { Logo } from '../common/Logo.jsx';
 import { SearchInput } from '../common/SearchInput.jsx';
 import { curriculum } from '../../data/db/curriculum.js';
-import { topics } from '../../data/db/topics.js';
+import { topics } from '../../data/db/topics/index.js';
 
 export function Sidebar({ activeTopicSlug, onTopicChange }) {
   const [query, setQuery] = useState('');

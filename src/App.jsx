@@ -6,11 +6,11 @@ import { OverviewPanel } from './components/topic/OverviewPanel.jsx';
 import { CodePanel } from './components/topic/CodePanel.jsx';
 import { VisualizePanel } from './components/topic/VisualizePanel.jsx';
 import { PracticePanel } from './components/topic/PracticePanel.jsx';
-import { AskBar } from './components/topic/AskBar.jsx';
+// import { AskBar } from './components/topic/AskBar.jsx';
 import { getTopicBySlug } from './data/db/selectors.js';
 import { tabs } from './data/ui.js';
 
-const defaultTopicSlug = 'arrays';
+const defaultTopicSlug = 'problem-solving-basics';
 
 export default function App() {
   const [topicSlug, setTopicSlug] = useState(defaultTopicSlug);
@@ -32,7 +32,7 @@ export default function App() {
         {activeTab === 'visualize' && <VisualizePanel topic={topic} />}
         {activeTab === 'practice' && <PracticePanel topic={topic} />}
       </section>
-      <AskBar topic={topic} />
+      {/* <AskBar topic={topic} /> */}
     </AppShell>
   );
 }
