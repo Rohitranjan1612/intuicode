@@ -62,6 +62,112 @@ def count_islands(grid):
                 islands += 1
                 dfs(r, c)
     return islands`,
+  codeExamples: {
+    Java: `import java.util.*;
+
+class Solution {
+    private static final int[][] DIRS = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+    public int countIslands(char[][] grid) {
+        int rows = grid.length;
+        int cols = grid[0].length;
+        boolean[][] seen = new boolean[rows][cols];
+        int islands = 0;
+
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (grid[r][c] == '1' && !seen[r][c]) {
+                    islands++;
+                    dfs(grid, seen, r, c);
+                }
+            }
+        }
+        return islands;
+    }
+
+    private void dfs(char[][] grid, boolean[][] seen, int r, int c) {
+        if (r < 0 || r >= grid.length || c < 0 || c >= grid[0].length) return;
+        if (grid[r][c] == '0' || seen[r][c]) return;
+
+        seen[r][c] = true;
+        for (int[] dir : DIRS) {
+            dfs(grid, seen, r + dir[0], c + dir[1]);
+        }
+    }
+}`,
+    'C++': `#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+    vector<pair<int, int>> dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+    void dfs(vector<vector<char>>& grid, vector<vector<bool>>& seen, int r, int c) {
+        if (r < 0 || r >= grid.size() || c < 0 || c >= grid[0].size()) return;
+        if (grid[r][c] == '0' || seen[r][c]) return;
+
+        seen[r][c] = true;
+        for (auto [dr, dc] : dirs) {
+            dfs(grid, seen, r + dr, c + dc);
+        }
+    }
+
+public:
+    int countIslands(vector<vector<char>>& grid) {
+        int rows = grid.size(), cols = grid[0].size(), islands = 0;
+        vector<vector<bool>> seen(rows, vector<bool>(cols, false));
+
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (grid[r][c] == '1' && !seen[r][c]) {
+                    islands++;
+                    dfs(grid, seen, r, c);
+                }
+            }
+        }
+        return islands;
+    }
+};`,
+    JS: `const DIRS = [[1, 0], [-1, 0], [0, 1], [0, -1]];
+
+function countIslands(grid) {
+  const rows = grid.length;
+  const cols = grid[0].length;
+  const seen = Array.from({ length: rows }, () => Array(cols).fill(false));
+  let islands = 0;
+
+  function dfs(r, c) {
+    if (r < 0 || r >= rows || c < 0 || c >= cols) return;
+    if (grid[r][c] === '0' || seen[r][c]) return;
+
+    seen[r][c] = true;
+    for (const [dr, dc] of DIRS) {
+      dfs(r + dr, c + dc);
+    }
+  }
+
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      if (grid[r][c] === '1' && !seen[r][c]) {
+        islands++;
+        dfs(r, c);
+      }
+    }
+  }
+  return islands;
+}`,
+  },
+  sampleOutput: `Input:
+[
+  ["1","1","0","0"],
+  ["1","0","0","1"],
+  ["0","0","1","1"]
+]
+
+Output:
+3
+
+Why:
+The grid contains three disconnected groups of land cells.`,
   practice: [
     { title: 'Number of Islands', difficulty: 'Medium', source: 'LeetCode #200' },
     { title: 'Spiral Matrix', difficulty: 'Medium', source: 'LeetCode #54' },

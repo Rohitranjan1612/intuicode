@@ -409,6 +409,11 @@ button {
   min-height: 82px;
 }
 
+.code-panel {
+  display: grid;
+  gap: 12px;
+}
+
 .language-row,
 .viz-actions {
   display: flex;
@@ -431,6 +436,94 @@ button {
   border-color: #78d9ba;
   color: #085041;
   font-weight: 720;
+}
+
+.code-workspace {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+}
+
+.editor-card,
+.output-card {
+  background: var(--bg-side);
+  border: 0.5px solid var(--border-soft);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.editor-toolbar {
+  align-items: center;
+  border-bottom: 0.5px solid var(--border-soft);
+  color: var(--text-faint);
+  display: flex;
+  font-size: 12px;
+  font-weight: 720;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 8px 10px 8px 14px;
+}
+
+.editor-toolbar div {
+  display: flex;
+  gap: 7px;
+}
+
+.editor-toolbar button {
+  background: var(--bg-shell);
+  border: 0.5px solid var(--border-strong);
+  border-radius: 7px;
+  color: var(--text-mid);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+}
+
+.editor-toolbar .run-button {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+
+.code-editor {
+  background: transparent;
+  border: 0;
+  color: var(--text-main);
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.7;
+  min-height: 520px;
+  outline: 0;
+  padding: 15px 16px;
+  resize: vertical;
+  tab-size: 4;
+  width: 100%;
+}
+
+.output-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+}
+
+.output-title {
+  border-bottom: 0.5px solid var(--border-soft);
+  color: var(--text-faint);
+  font-size: 12px;
+  font-weight: 720;
+  padding: 12px 14px;
+}
+
+.output-card pre {
+  color: var(--text-mid);
+  flex: 1;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.65;
+  overflow: auto;
+  padding: 14px;
+  white-space: pre-wrap;
 }
 
 .code-block {
@@ -622,6 +715,7 @@ button {
 
   .complexity-grid,
   .pattern-grid,
+  .code-workspace,
   .topic-nav {
     grid-template-columns: 1fr;
   }

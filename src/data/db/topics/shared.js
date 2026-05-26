@@ -11,6 +11,8 @@ export function createTopic({
   complexity,
   patterns,
   code,
+  codeExamples,
+  sampleOutput,
   practice,
   visualizer = 'sort-bars',
 }) {
@@ -27,6 +29,8 @@ export function createTopic({
     complexity,
     patterns,
     code,
+    codeExamples,
+    sampleOutput,
     practice,
     visualizer,
   };
