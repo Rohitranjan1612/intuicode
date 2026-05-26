@@ -14,6 +14,7 @@ export const curriculum = [
       'hashing',
       'strings',
       'bit-manipulation',
+      'interview-problems',
     ],
   },
 ];

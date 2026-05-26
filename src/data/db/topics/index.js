@@ -9,6 +9,7 @@ import { sorting } from './sorting.js';
 import { hashing } from './hashing.js';
 import { strings } from './strings.js';
 import { bitManipulation } from './bit-manipulation.js';
+import { interviewProblems } from './interview-problems.js';
 
 export const topicList = [
   problemSolvingBasics,
@@ -22,6 +23,7 @@ export const topicList = [
   hashing,
   strings,
   bitManipulation,
+  interviewProblems,
 ];
 
 export const topics = Object.fromEntries(topicList.map((topic) => [topic.slug, topic]));
