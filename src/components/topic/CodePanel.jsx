@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { codeExamplesBySlug, sampleOutputBySlug } from '../../data/db/codeExamples.js';
 
 const languages = ['Python', 'Java', 'C++', 'JS'];
 
@@ -76,7 +77,8 @@ export function CodePanel({ topic }) {
 }
 
 function buildExamples(topic) {
-  const sampleOutput = topic.sampleOutput ?? `Topic: ${topic.name}
+  const codeExamples = topic.codeExamples ?? codeExamplesBySlug[topic.slug] ?? {};
+  const sampleOutput = topic.sampleOutput ?? sampleOutputBySlug[topic.slug] ?? `Topic: ${topic.name}
 Status: sample completed`;
 
   return {
@@ -87,7 +89,7 @@ Status: sample completed`;
     },
     Java: {
       code:
-        topic.codeExamples?.Java ??
+        codeExamples.Java ??
         `class Solution {
     public static void main(String[] args) {
         System.out.println("${escapeForDoubleQuote(topic.name)}");
@@ -99,7 +101,7 @@ Status: sample completed`;
     },
     'C++': {
       code:
-        topic.codeExamples?.['C++'] ??
+        codeExamples['C++'] ??
         `#include <bits/stdc++.h>
 using namespace std;
 
@@ -113,7 +115,7 @@ int main() {
     },
     JS: {
       code:
-        topic.codeExamples?.JS ??
+        codeExamples.JS ??
         `function solve() {
   console.log("${escapeForDoubleQuote(topic.name)}");
   console.log("Use this tab to sketch the JavaScript version of the pattern.");
