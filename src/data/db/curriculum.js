@@ -10,6 +10,7 @@ export const curriculum = [
       'carry-forward',
       'subarrays',
       '2d-matrices',
+      'sorting',
     ],
   },
 ];
