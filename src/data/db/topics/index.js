@@ -3,7 +3,15 @@ import { timeComplexity } from './time-complexity.js';
 import { arrays } from './arrays.js';
 import { prefixSum } from './prefix-sum.js';
 import { carryForward } from './carry-forward.js';
+import { subarrays } from './subarrays.js';
 
-export const topicList = [problemSolvingBasics, timeComplexity, arrays, prefixSum, carryForward];
+export const topicList = [
+  problemSolvingBasics,
+  timeComplexity,
+  arrays,
+  prefixSum,
+  carryForward,
+  subarrays,
+];
 
 export const topics = Object.fromEntries(topicList.map((topic) => [topic.slug, topic]));

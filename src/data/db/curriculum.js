@@ -8,6 +8,7 @@ export const curriculum = [
       'arrays',
       'prefix-sum',
       'carry-forward',
+      'subarrays',
     ],
   },
 ];
