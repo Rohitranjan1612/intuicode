@@ -9,6 +9,7 @@ export const curriculum = [
       'prefix-sum',
       'carry-forward',
       'subarrays',
+      '2d-matrices',
     ],
   },
 ];
